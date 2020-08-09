@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+    <title>HACKP</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='lodash.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='immutable.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='axios.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='jquery.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+    <style>
+        .content{
+            max-width: 555px;
+            margin: auto;
+        }
+        .button {
+        background-color: #008CBA; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        }
+        h1{
+            color: : blue;
+            font-family: serif;
+            font-size: 250%; 
+        }
+        p{
+            color: blue;
+            font-family: sans-serif;
+            font-size: 160%;
+        }
+        .name-field {
+         padding: 18px;
+         font-size: 20px;
+        }
+        .form-action {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        border: 2px solid blue; 
+        }
+    </style>
+</head>
+
+<body style="background-color:rgba(255,0,0,0.5);">
+    <h1 style="text-align:center">UPLOAD THE PRISONERS' DETAILS TO POLICE DATABASE</h1>
+<div class="content">
+    <div id="train-content">
+        <form method="post" id="train">
+            <div class="message">
+
+            </div>
+            <p style="text-align:center"class="description">Upload The Prisoners' Details To Police Database To Recognize Later</p>
+            <div class="form-item">
+                <label for="input-file">PHOTO OF PRISONER</label>
+                <input type="file" name="file" id="input-file" accept="image/*"/>
+            </div>
+            <br>
+            <div class="form-item">
+                <label >NAME AND DETAILS</label>
+                <input class="name-field" name="name" value="" type="text" placeholder="Please enter full name,DOB,Case details"/>
+            </div>
+            <br>
+            <div class="form-action">
+                <button class="button">UPLOAD THE DETAILS TO POLICE DATABASE</button>
+                </div>
+                <p class="description" style="color:red;font-size: 15px;text-align:center">After click the upload button.Please wait until a successful conformation </p>
+        </form>
+    </div>
+</div>
+</body>
